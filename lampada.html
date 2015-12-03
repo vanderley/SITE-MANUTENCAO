@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+
+    <title>Formulário</title>
+
+      <link rel="stylesheet" href="_css/estilos.css"/>
+
+  </head>
+  <body background="_imagens/tec.jpg">
+
+    <div id="interface">
+
+    <nav id="menu">
+      <h1>Menu Pricipal</h1>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="file:///media/aluno/VANDERPEN/lampada/index.html">lampada</a></li>
+          <li><a href="file:///home/aluno/SITE-MANUTENCAO/fotos.html">Fotos</a></li>
+          <li><a target="_blank" href="formulario.html">formulario</a></li>
+          <li><a href="file:///home/aluno/SITE-MANUTENCAO/faleconosco.html">Fale conosco</a></li>
+    </ul>
+    </nav>
+
+    <meta charset="utf-8">
+    <title>aula java script - lampada</title>
+  </head>
+  <script>
+
+var quebrado = false;
+
+  function acendelampada(){
+    if (!quebrado) {
+
+    document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+     }
+
+  }
+
+  function apagarlampada(){
+    if (!quebrado) {
+    document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+     }
+
+  }
+
+
+ function quebrarlampada(){
+   document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg"
+   quebrado = true;
+}
+
+  </script>
+
+  <body>
+    <h1> acenda a lampada!</h1>
+
+<img id="luz" src="_imagens/lampada-apagada.jpg"
+ onmousemove= "acendelampada()"
+ onmouseout= "apagarlampada()"
+ onclick= "quebrarlampada()"/>
+
+
+ </body>
+</html>
